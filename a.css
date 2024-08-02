@@ -1,0 +1,53 @@
+.child {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 225%;
+    width: 70%;
+ 
+}
+
+.container {
+    font-family: arial;
+    font-size: 20px;
+    margin: 25px;
+    outline: dashed 1px black;
+  }
+p {
+    /* 수평 중앙 정렬하기 */
+    text-align: center;
+}
+.mb {
+    background-color: rgb(111, 196, 230);
+    color: white;
+    border: none;
+    
+    padding: 10px 25px;
+    border-radius: 10px;
+
+}
+.mb:hover {
+
+	  background-color: rgb(97, 165, 253);
+
+}
+.mb:active {
+  transform: scale(0.95);
+}
+
+.ma {
+  background-color: rgb(235, 135, 160);
+  color: white;
+  border: none;
+  
+  padding: 10px 30px;
+  border-radius: 10px;
+
+}
+.ma:hover {
+
+  background-color: rgb(253, 97, 157);
+
+}
+.ma:active {
+  transform: scale(0.95);
+}
