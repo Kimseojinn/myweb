@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>선택 과목</title> 
+    <link href="a.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+    
+      <div class="child">
+        <p>1. 수능 선택과목</p>
+        <p>희망 전공을 선택해 주세요!</p>
+        <input type="button" class="mb" id="wjsrhd" value="무전공" onclick="f1();">
+        <input type="button" class="mb" id="science" value="공학" onclick="f2();">
+        <input type="button" class="mb" id="nature" value="자연" onclick="f3();">
+        <input type="button" class="mb" id="humanities" value="인문" onclick="f4();">
+        <input type="button" class="mb" id="medical" value="의학" onclick="f5();">
+        <input type="button" class="mb" id="play" value="예체능" onclick="f6();">
+        <input type="button" class="mb" id="teach" value="교육" onclick="f7();">
+      </div>
+      <p>과목을 선택해 주세요!</p>
+      <div class="child">
+        <input type="button" class="mb" id="write" value="화법과 작문" onclick="g1();">
+        <input type="button" class="mb" id="language" value="언어와 매체" onclick="g2();">
+        <input type="button" class="mb" id="mijuk" value="미적분" onclick="g3();">
+        <input type="button" class="mb" id="hwaktong" value="확률과 통계" onclick="g4();">
+        <input type="button" class="mb" id="circle" value="기하" onclick="g5();">
+        <input type="button" class="mb" id="physics1" value="물리1" onclick="g6();">
+        <input type="button" class="mb" id="chemi1" value="화학1" onclick="g7();">
+        <input type="button" class="mb" id="lifescience1" value="생명1" onclick="g8();">
+        <input type="button" class="mb" id="earth1" value="지구1" onclick="g9();">
+        <input type="button" class="mb" id="physics2" value="물리2" onclick="g10();">
+        <input type="button" class="mb" id="chemi2" value="화학2" onclick="g11();">
+        <input type="button" class="mb" id="lifescience2" value="생명2" onclick="g12();">
+        <input type="button" class="mb" id="earth2" value="지구2" onclick="g13();">
+        <input type="button" class="mb" id="ethical" value="윤리와 사상" onclick="g14();">
+        <input type="button" class="mb" id="life ethical" value="생활과 윤리" onclick="g15();">
+        <input type="button" class="mb" id="east asian" value="동아시아사" onclick="g16();">
+        <input type="button" class="mb" id="worldhistory" value="세계사" onclick="g17();">
+        <input type="button" class="mb" id="world geography" value="세계지리" onclick="g18();">
+        <input type="button" class="mb" id="korea" value="한국지리" onclick="g19();">
+        <input type="button" class="mb" id="rule" value="정치와법" onclick="g20();">
+        <input type="button" class="mb" id="social culture" value="사회문화" onclick="g21();">
+        <input type="button" class="mb" id="wantmoney" value="경제" onclick="g22();">
+      </div>
+      <div class="child">
+        <p>._.</p>
+        <input type="button" class="ma" id="selected" name="rPtks" value="계산" onclick="q();">
+      </div>
+
+      <div class="child" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+      var n1;
+      var n2;    
+      var a;
+      var b;
+      var c;
+      var d;
+      var e;
+      var f;
+      var g;
+      var tb;
+      var ta;
+
+      function f1() {
+        n1 = 6;
+        a=1;
+        b=0;
+        c=0;
+        d=0;
+        e=0;
+        f=0;
+        g=0;
+        tb=document.getElementById('wjsrhd');
+      }
+      function f2() {
+        n1 = 18;
+        a=0;
+        b=1;
+        c=0;
+        d=0;
+        e=0;
+        f=0;
+        g=0;
+        tb=document.getElementById('science');
+      }
+      function f3() {
+        n1 = 9;
+        a=0;
+        b=0;
+        c=1;
+        d=0;
+        e=0;
+        f=0;
+        g=0;
+        tb=document.getElementById('nature');
+      }
+      function f4() {
+        n1 = 9;
+        a=0;
+        b=0;
+        c=0;
+        d=1;
+        e=0;
+        f=0;
+        g=0;
+        tb=document.getElementById('humanities');
+      }
+      function f5() {
+        n1 = 8;
+        a=0;
+        b=0;
+        c=0;
+        d=0;
+        e=1;
+        f=0;
+        g=0;
+        tb=document.getElementById('medical');
+      }
+      function f6() {
+        n1 = 8;
+        a=0;
+        b=0;
+        c=0;
+        d=0;
+        e=0;
+        f=1;
+        g=0;
+        tb=document.getElementById('play');
+      }
+      function f7() {
+        n1 = 8;
+        a=0;
+        b=0;
+        c=0;
+        d=0;
+        e=0;
+        f=0;
+        g=1;
+        tb=document.getElementById('teach');
+      }
+
+
+      function g1() {
+        ta=document.getElementById('write');
+	      if (a==1){n2 =3;}
+        else if (b==1){n2=4;}
+	      else if (c==1){n2=4;}
+        else if (d==1){n2=4;}
+        else if (e==1){n2=2;}
+        else if (f==1){n2=4;}
+        else if (g==1){n2=5;}
+      }
+
+      function g2() {
+        ta=document.getElementById('language');
+	      if (a==1){n2 =3;}
+        else if (b==1){n2=14;}
+	      else if (c==1){n2=5;}
+        else if (d==1){n2=5;}
+        else if (e==1){n2=6;}
+        else if (f==1){n2=4;}
+        else if (g==1){n2=3;}
+      }
+
+      function g3() {
+        ta=document.getElementById('mijuk');
+ 	      if (a==1){n2 =1;}
+        else if (b==1){n2=16;}
+	      else if (c==1){n2=8;}
+        else if (d==1){n2=2;}
+        else if (e==1){n2=7;}
+        else if (f==1){n2=2;}
+        else if (g==1){n2=0;}
+      }
+      function g4() {
+        ta=document.getElementById('hwaktong');	      
+        if (a==1){n2 =5;}
+        else if (b==1){n2=2;}
+	      else if (c==1){n2=1;}
+        else if (d==1){n2=7;}
+        else if (e==1){n2=1;}
+        else if (f==1){n2=5;}
+        else if (g==1){n2=7;}
+      }
+      function g5() {
+        ta=document.getElementById('circle'); 
+	      if (a==1){n2 =0;}
+        else if (b==1){n2=0;}
+	      else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=1;}
+        else if (g==1){n2=0;}
+      }
+      function g6() {
+        ta=document.getElementById('physics1');
+	      if (a==1){n2 =0; }
+        else if (b==1){n2=6;}
+	      else if (c==1){n2=3;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+
+      function g7() {
+        ta=document.getElementById('chemi1');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=4;}
+        else if (c==1){n2=2;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=3;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g8() {
+        ta=document.getElementById('lifescience1');
+        if (a==1){n2 =2;}
+        else if (b==1){n2=8;}
+        else if (c==1){n2=4;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=8;}
+        else if (f==1){n2=1;}
+        else if (g==1){n2=0;}
+      }
+      function g9() {
+        ta=document.getElementById('earth1');
+        if (a==1){n2 =2;}
+        else if (b==1){n2=5;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=3;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g10() {
+        ta=document.getElementById('physics2');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g11() {
+        ta=document.getElementById('chemi2');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=1;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g12() {
+        ta=document.getElementById('lifescience2');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=1;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g13() {
+        ta=document.getElementById('earth2');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g14() {
+        ta=document.getElementById('ethical');
+        if (a==1){n2 =2;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=1;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=2;}
+        else if (g==1){n2=0;}
+      }
+      function g15() {
+        ta=document.getElementById('life ethical');
+        if (a==1){n2 =4;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=7;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=5;}
+        else if (g==1){n2=7;}
+      }
+      function g16() {
+        ta=document.getElementById('east asian');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=1;}
+        else if (g==1){n2=0;}
+      }
+      function g17() {
+        ta=document.getElementById('worldhistory');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=1;}
+        else if (g==1){n2=0;}
+      }
+      function g18() {
+        ta=document.getElementById('world geography');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=0;}
+        else if (c==1){n2=1;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=1;}
+      }
+      function g19() {
+        ta=document.getElementById('korea');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=3;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=2;}
+        else if (g==1){n2=1;}
+      }
+      function g20() {
+        ta=document.getElementById('rule');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=0;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+      function g21() {
+        ta=document.getElementById('social culture');
+        if (a==1){n2 =2;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=3;}
+        else if (d==1){n2=7;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=4;}
+        else if (g==1){n2=7;}
+      }
+      function g22() {
+        ta=document.getElementById('wantmoney');
+        if (a==1){n2 =0;}
+        else if (b==1){n2=1;}
+        else if (c==1){n2=0;}
+        else if (d==1){n2=1;}
+        else if (e==1){n2=0;}
+        else if (f==1){n2=0;}
+        else if (g==1){n2=0;}
+      }
+
+
+      function q() {
+        if (typeof n1 !== 'undefined' && typeof n2 !== 'undefined') {
+          if (n1 === 0) {
+            document.getElementById('result').innerHTML = '<p>n1 값이 0이어서 나눌 수 없습니다.</p>';
+          } else {
+            var n3 = (n2 / n1);
+            n3=n3.toFixed(2);
+            document.getElementById('result').innerHTML = '<p>'+tb.value+'계열을 희망한 사람이 '+ta.value+'(을/를)선택한 확률: '+n3+'</p>';;
+          }
+        } else {
+          alert('먼저 전공과 미적 버튼을 눌러 값을 설정하세요.');
+        }
+      }
+    </script>
+    <div class="container">
+      <p>2. 2학년 선택과목</p>
+      <p>최우선적으로 선택할 과목을 선택해 주세요!</p>
+
+      <div class="child">
+        <input type="button" class="mb" id="ethical" value="윤리와 사상" onclick="p1();">
+        <input type="button" class="mb" id="politic" value="정치와 법" onclick="p2();">
+        <input type="button" class="mb" id="korea" value="한국지리" onclick="p3();">
+        <input type="button" class="mb" id="world" value="세계사" onclick="p4();">
+        <input type="button" class="mb" id="physics" value="물리1" onclick="p5();">
+        <input type="button" class="mb" id="chemical" value="화학1" onclick="p6();">
+        <input type="button" class="mb" id="biology" value="생명1" onclick="p7();">
+        <input type="button" class="mb" id="earth" value="지구1" onclick="p8();">
+      </div>
+
+      <p>확인하고 싶은 과목을 선택해 주세요!</p>
+      <div class="child">
+      <input type="button" class="mb" id="ethical1" value="윤리와 사상" onclick="z1();">
+      <input type="button" class="mb" id="politic1" value="정치와 법" onclick="z2();">
+      <input type="button" class="mb" id="korea1" value="한국지리" onclick="z3();">
+      <input type="button" class="mb" id="world1" value="세계사" onclick="z4();">
+      <input type="button" class="mb" id="physics1" value="물리1" onclick="z5();">
+      <input type="button" class="mb" id="chemical1" value="화학1" onclick="z6();">
+      <input type="button" class="mb" id="biology1" value="생명1" onclick="z7();">
+      <input type="button" class="mb" id="earth1" value="지구1" onclick="z8();">
+      </div>
+  
+      <div class="child">
+        <p>._.</p>
+        <input type="button" class="ma" id="selected" name="rPtks" value="계산" onclick="q1();">
+      </div>
+      <div id="result1"></div>
+    </div>
+    <script type="text/javascript">
+      var n1;
+      var n2;    
+      var a;
+      var b;
+      var c;
+      var d;
+      var e;
+      var f;
+      var g;
+      var h;
+      var tc;
+      var td;
+      function p1() {
+      n1 = 33;
+      a=1;
+      b=0;
+      c=0;
+      d=0;
+      e=0;
+      f=0;
+      g=0;
+      tc=document.getElementById('ethical');      
+      }
+      function p2() {
+          n1 = 37;
+          a=0;
+      b=1;
+      c=0;
+      d=0;
+      e=0;
+      f=0;
+      g=0;
+      tc=document.getElementById('politic');
+      }
+      function p3() {
+          n1 = 23;
+          a=0;
+      b=0;
+      c=1;
+      d=0;
+      e=0;
+      f=0;
+      g=0;
+      tc=document.getElementById('korea');      
+      }
+      function p4() {
+          n1 = 21;
+          a=0;
+      b=0;
+      c=0;
+      d=1;
+      e=0;
+      f=0;
+      g=0;
+      tc=document.getElementById('world');
+      }
+      function p5() {
+          n1 = 10;
+          a=0;
+      b=0;
+      c=0;
+      d=0;
+      e=1;
+      f=0;
+      g=0;
+      tc=document.getElementById('physics');
+      }
+      function p6() {
+          n1 = 14;
+          a=0;
+      b=0;
+      c=0;
+      d=0;
+      e=0;
+      f=1;
+      g=0;
+      tc=document.getElementById('chemical');
+      }
+    function p7() {
+      n1 = 43;
+      a=0;
+      b=0;
+      c=0;
+      d=0;
+      e=0;
+      f=0;
+      g=1;
+      tc=document.getElementById('biology');
+      }
+    function p8() {
+      n1 = 64;
+      a=0;
+      b=0;
+      c=0;
+      d=0;
+      e=0;
+      f=0;
+      g=0;
+      h=1;
+      tc=document.getElementById('earth');
+      }
+    function z1() {
+      td=document.getElementById('ethical');      
+if (a==1){n2 =33;}
+else if (b==1){n2=13;}
+else if (c==1){n2=1;}
+else if (d==1){n2=7;}
+else if (e==1){n2=2;}
+else if (f==1){n2=4;}
+else if (g==1){n2=14;}
+else if (h==1){n2=18;}
+    }
+
+
+function z2() {
+  td=document.getElementById('politic');
+  if (a==1){n2 =14;}
+else if (b==1){n2=37;}
+else if (c==1){n2=10;}
+else if (d==1){n2=3;}
+else if (e==1){n2=3;}
+else if (f==1){n2=7;}
+else if (g==1){n2=13;}
+else if (h==1){n2=19;}
+    }
+ function z3() {
+  td=document.getElementById('korea');
+  if (a==1){n2 =14;}
+else if (b==1){n2=10;}
+else if (c==1){n2=23;}
+else if (d==1){n2=2;}
+else if (e==1){n2=4;}
+else if (f==1){n2=0;}
+else if (g==1){n2=3;}
+else if (h==1){n2=20;}
+    }
+function z4() {
+  td=document.getElementById('world');
+  if (a==1){n2 =7;}
+else if (b==1){n2=3;	}
+else if (c==1){n2=2;}
+else if (d==1){n2=21;}
+else if (e==1){n2=1;}
+else if (f==1){n2=4;}
+else if (g==1){n2=10;}
+else if (h==1){n2=9;}
+    }
+
+function z5() {
+  td=document.getElementById('physics');
+  if (a==1){n2 =2;}
+else if (b==1){n2=3;}
+else if (c==1){n2=4;}
+else if (d==1){n2=1;}
+else if (e==1){n2=10;}
+else if (f==1){n2=0;}
+else if (g==1){n2=0;}
+else if (h==1){n2=7;}
+    }
+
+function z6() {
+  td=document.getElementById('chemical');
+  if (a==1){n2 =4;}
+else if (b==1){n2=7;	}
+else if (c==1){n2=0;}
+else if (d==1){n2=4;}
+else if (e==1){n2=0;}
+else if (f==1){n2=14;}
+else if (g==1){n2=10;}
+else if (h==1){n2=2;}
+}
+
+
+function z7() {
+  td=document.getElementById('biology');
+  if (a==1){n2 =4;}
+else if (b==1){n2=7;	}
+else if (c==1){n2=0;}
+else if (d==1){n2=4;}
+else if (e==1){n2=0;}
+else if (f==1){n2=14;}
+else if (g==1){n2=43;}
+else if (h==1){n2=2;}
+    }
+function z8() {
+  td=document.getElementById('earth');
+  if (a==1){n2 =18;}
+else if (b==1){n2=19;	}
+else if (c==1){n2=20;}
+else if (d==1){n2=9;}
+else if (e==1){n2=7;}
+else if (f==1){n2=2;}
+else if (g==1){n2=8;}
+else if (h==1){n2=64;}
+    }
+
+    function q1() {
+      if (typeof n1 !== 'undefined' && typeof n2 !== 'undefined') {
+        if (n1 === 0) {
+          document.getElementById('result1').innerHTML = '<p>'+tc.value+'(을/를) 선택한 사람이 없습니다.</p>';
+        } else {
+          var n3 = (n2 / n1);
+          n3=n3.toFixed(2);
+          document.getElementById('result1').innerHTML = '<p>'+tc.value+'(을/를) 선택한 사람이 '+td.value+'(을/를)선택한 확률: '+n3+'</p>';
+        }
+      } else {
+        alert('먼저 버튼을 눌러 값을 설정하세요.');
+      }
+    }
+    </script>
+
+    <div class="container">
+    <p>3. 3학년 선택과목</p>
+    <p>최우선적으로 선택할 과목을 선택해 주세요!</p>
+    <div class="child">
+      <input type="button" class="mb" id="write" value="화법과 작문" onclick="s1();">
+      <input type="button" class="mb" id="language" value="언어와 매체" onclick="s2();">
+      <input type="button" class="mb" id="mijuk" value="미적분" onclick="s3();">
+      <input type="button" class="mb" id="hwaktong" value="확률과 통계" onclick="s4();">
+      <input type="button" class="mb" id="english reading" value="영어 독해와 작문" onclick="s5();">
+      <input type="button" class="mb" id="english talk" value="영어회화" onclick="s6();">
+      <input type="button" class="mb" id="ethical" value="생활과 윤리" onclick="s7();">
+      <input type="button" class="mb" id="social culture" value="사회 문화" onclick="s8();">
+      <input type="button" class="mb" id="economic" value="경제" onclick="s9();">
+    </div>
+    <p>확인하고 싶은 과목을 선택해 주세요!</p>
+    <div class="child">
+  <input type="button" class="mb" id="write1" value="화법과 작문" onclick="w1();">
+  <input type="button" class="mb" id="language1" value="언어와 매체" onclick="w2();">
+  <input type="button" class="mb" id="mijuk1" value="미적분" onclick="w3();">
+  <input type="button" class="mb" id="hwaktong1" value="확률과 통계" onclick="w4();">
+  <input type="button" class="mb" id="english reading1" value="영어독해와 작문" onclick="w5();">
+  <input type="button" class="mb" id="english talk1" value="영어회화" onclick="w6();">
+  <input type="button" class="mb" id="ethical" value="생활과 윤리" onclick="w7();">
+  <input type="button" class="mb" id="social culture" value="사회 문화" onclick="w8();">
+  <input type="button" class="mb" id="economic1" value="경제" onclick="w9();">
+    </div>
+    <div class="child">
+  <p>._.</p>
+  <input type="button" class="ma" id="selected" name="rPtks" value="계산" onclick="q2();">
+    </div>
+    <div id="result2"></div>
+    </div>
+
+    <script type="text/javascript">
+  var n1;
+  var n2;    
+  var a;
+  var b;
+  var c;
+  var d;
+  var e;
+  var f;
+  var g;
+  var h;
+  var i;
+  var tf;
+  var te;
+  function s1() {
+    n1 = 113;
+    a=1;
+    b=0;
+    c=0;
+    d=0;
+    e=0;
+    f=0;
+    g=0;
+    tf=document.getElementById('write');
+  }
+  function s2() {
+    n1 = 119;
+    a=0;
+    b=1;
+    c=0;
+    d=0;
+    e=0;
+    f=0;
+    g=0;
+    tf=document.getElementById('language');
+  }
+  function s3() {
+    n1 = 75;
+    a=0;
+    b=0;
+    c=1;
+    d=0;
+    e=0;
+    f=0;
+    g=0;
+    tf=document.getElementById('mijuk');
+  }
+  function s4() {
+    n1 = 110;
+    a=0;
+    b=0;
+    c=0;
+    d=1;
+    e=0;
+    f=0;
+    g=0;
+    tf=document.getElementById('hwaktong');
+  }
+  function s5() {
+    n1 = 145;
+    a=0;
+    b=0;
+    c=0;
+    d=0;
+    e=1;
+    f=0;
+    g=0;
+    tf=document.getElementById('english reading');
+  }
+  function s6() {
+    n1 = 38;
+    a=0;
+    b=0;
+    c=0;
+    d=0;
+    e=0;
+    f=1;
+    g=0;
+    tf=document.getElementById('english talk');
+  }
+  function s7() {
+    n1 = 112;
+    a=0;
+    b=0;
+    c=0;
+    d=0;
+    e=0;
+    f=0;
+    g=1;
+    tf=document.getElementById('ethical');
+  }
+  function s8() {
+    n1 = 92;
+    a=0;
+    b=0;
+    c=0;
+    d=0;
+    e=0;
+    f=0;
+    g=0;
+    h=1;
+    tf=document.getElementById('social culture');
+  }
+  function s9() {
+    n1 = 13;
+    a=0;
+    b=0;
+    c=0;
+    d=0;
+    e=0;
+    f=0;
+    g=0;
+    h=0;
+    i=1;
+    tf=document.getElementById('economic');
+  }
+
+
+  function w1() {
+    te=document.getElementById('write');
+if (a==1){n2 =113;}
+else if (b==1){n2=35;}
+else if (c==1){n2=27;}
+else if (d==1){n2=51;}
+else if (e==1){n2=81;}
+else if (f==1){n2=29;}
+else if (g==1){n2=74;}
+else if (h==1){n2=63;}
+else if (i==1){n2=8;}
+  }
+
+
+function w2() {
+  te=document.getElementById('language');
+if (a==1){n2 =35;}
+else if (b==1){n2=119;}
+else if (c==1){n2=45;}
+else if (d==1){n2=57;}
+else if (e==1){n2=78;}
+else if (f==1){n2=20;}
+else if (g==1){n2=65;}
+else if (h==1){n2=61;}
+else if (i==1){n2=6;}
+  }
+function w3() {
+  te=document.getElementById('mijuk');
+if (a==1){n2 =27;}
+else if (b==1){n2=45;}
+else if (c==1){n2=75;}
+else if (d==1){n2=23;}
+else if (e==1){n2=52;}
+else if (f==1){n2=4;}
+else if (g==1){n2=13;}
+else if (h==1){n2=3;}
+else if (i==1){n2=5;}
+  }
+function w4() {
+  te=document.getElementById('hwaktong');
+if (a==1){n2 =51;}
+else if (b==1){n2=57;   }
+else if (c==1){n2=23;}
+else if (d==1){n2=110;}
+else if (e==1){n2=72;}
+else if (f==1){n2=14;}
+else if (g==1){n2=74;}
+else if (h==1){n2=63;}
+else if (i==1){n2=6;}
+  }
+
+
+function w5() {
+  te=document.getElementById('english reading');
+if (a==1){n2 =81;}
+else if (b==1){n2=78;}
+else if (c==1){n2=52;}
+else if (d==1){n2=72;}
+else if (e==1){n2=145;}
+else if (f==1){n2=8;}
+else if (g==1){n2=87;}
+else if (h==1){n2=77;}
+else if (i==1){n2=10;}
+  }
+function w6() {
+  te=document.getElementById('english talk');
+if (a==1){n2 =29;}
+else if (b==1){n2=20;}
+else if (c==1){n2=4;}
+else if (d==1){n2=14;}
+else if (e==1){n2=8;}
+else if (f==1){n2=38;}
+else if (g==1){n2=20;}
+else if (h==1){n2=21;}
+else if (i==1){n2=4;}
+}
+
+
+function w7() {
+  te=document.getElementById('ethical');
+if (a==1){n2 =74;}
+else if (b==1){n2=65;}
+else if (c==1){n2=13;}
+else if (d==1){n2=74;}
+else if (e==1){n2=87;}
+else if (f==1){n2=20;}
+else if (g==1){n2=112;}
+else if (h==1){n2=69;}
+else if (i==1){n2=5;}
+  }
+function w8() {
+  te=document.getElementById('social culture');
+if (a==1){n2 =63;}
+else if (b==1){n2=61;}
+else if (c==1){n2=3;}
+else if (d==1){n2=63;}
+else if (e==1){n2=77;}
+else if (f==1){n2=21;}
+else if (g==1){n2=69;}
+else if (h==1){n2=92;}
+else if (i==1){n2=6;}
+  }
+function w9() {
+  te=document.getElementById('economic');
+if (a==1){n2 =8;}
+else if (b==1){n2=6;}
+else if (c==1){n2=5;}
+else if (d==1){n2=6;}
+else if (e==1){n2=10;}
+else if (f==1){n2=4;}
+else if (g==1){n2=5;}
+else if (h==1){n2=6;}
+else if (i==1){n2=13;}
+  }
+
+  function q2() {
+    if (typeof n1 !== 'undefined' && typeof n2 !== 'undefined') {
+      if (n1 === 0) {
+        document.getElementById('result2').innerHTML = '<p>값이 0이어서 나눌 수 없습니다.</p>';
+      } else {
+        var n3 = (n2 / n1);
+        n3=n3.toFixed(2);
+        document.getElementById('result2').innerHTML = '<p>'+tf.value+'(을/를) 선택한 사람이 '+te.value+'(을/를)선택한 확률: '+n3+'</p>';
+      }
+    } else {
+      alert('먼저 버튼을 눌러 값을 설정하세요.');
+    }
+  }
+    </script>
+    <div>
+      <p style="color: red;">* 프로그램에 사용된 데이터는 세종대성고 3학년 재학중인 학생들의 데이터 입니다.</p>
+    </div>
+  </body>
+</html>
